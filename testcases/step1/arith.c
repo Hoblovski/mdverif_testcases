@@ -3,7 +3,7 @@ int f1()
 { }
 
 int f2()
-    ensures 100+2 == 3
+    ensures 100+2 == 102
 { }
 
 int f3()
@@ -31,8 +31,15 @@ int f7()
 
 // 如果前提为假，那么蕴涵式一定为真
 int f8()
-    ensures ! (2 <= 2) || 2 == 2 --> 7 + 1 == 7
+    ensures 2 == 2 && ! (2 <= 2) --> 7 + 1 == 7
 { }
+
+// result 表示返回值
+int f9()
+    ensures result +10 == 243
+{
+    return 233;
+}
 
 int main()
 { }
