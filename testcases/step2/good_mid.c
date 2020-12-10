@@ -3,7 +3,7 @@ int mid_bad(int l, int r)
     requires l <= r
     ensures l <= result && result <= r
 {
-    return l + (r-l)/2
+    return l + (r-l)/2;
 }
 
 int main() {}

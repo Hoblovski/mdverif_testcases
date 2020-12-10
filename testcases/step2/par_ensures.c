@@ -8,7 +8,7 @@ int f1(int x, int y)
     z = z + x;
     y = 100;
     x = 0;
-    return x + y
+    return x + y;
 }
 
 int main()
